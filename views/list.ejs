@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+        <h1><%= kindOfDay %></h1>
+        <div>
+        <ul>
+            <% for(let i=0;i<newItem.length;i++) { %>
+                <div class="inputdata">
+                <input type="checkbox" class="checkBox">
+                <li><%=newItem[i]%></li>
+                </div>
+            <% } %>
+        </ul>
+        <form action="/" method="post">
+            <input type="text" name="newItem" placeholder="Add New Item"><br>
+            <button class="submit">+</button>
+        </form>
+        </div>
+</body>
+</html>
